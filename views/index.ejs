@@ -22,10 +22,17 @@
         </nav>
       </div>
     </header>
-    <main>
-      <article>
+    <main class="container">
+      <h1 class="my-4">The Home Of visual Arts </h1>
+      <section class="my-4">
+        <a href="/new" class="mb-4">
+            <img src="https://img.icons8.com/ios-glyphs/30/000000/add.png"/>
+            New Post
+        </a>
+      </section>
+      <article class="my-5">
         <% articles.forEach( function(article){%>
-          <div class="card">
+          <div class="card my-5">
             <div class="card-body">
               <h2 class="card-title">
                 <%=article.title%>
@@ -43,7 +50,7 @@
         <%})%>
       </article>
     </main>
-    <footer>
+    <footer class="container">
       footer
     </footer>
     <!-- ----Scripts---- -->
