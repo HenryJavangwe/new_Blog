@@ -33,7 +33,7 @@
       </section>
       <article class="my-5">
         <% articles.forEach( function(article){%>
-          <div class="card my-5">
+          <div class="card my-5 p-3">
             <div class="card-body">
               <h2 class="card-title">
                 <%=article.title%>
@@ -45,8 +45,13 @@
                 <%=article.body%>
               </p>
               <p class="card-text"><small class="text-muted"><%=article.createdAt.toLocaleDateString()%></small></p>
+              <div class="text-center">
+                <img src="<%=article.image%>" class="img-index card-img" alt="...">
+              </div>
+              <div class="card-text">
+                <a href="view/<%=article.id%>" class="btn btn-warning text-dark my-3"> Read More</a>
+              </div>
             </div>
-            <img src="<%=article.image%>" class="card-img-top" alt="...">
           </div>
         <%})%>
       </article>

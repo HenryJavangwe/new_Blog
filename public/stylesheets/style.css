@@ -1,3 +1,6 @@
+body{
+  overflow-x: hidden;
+}
 body {
   font-family: 'Titillium Web', sans-serif;
 }
@@ -6,7 +9,17 @@ a {
   color: #00B7FF;
 }
 
-/* View Image Styles */
+.card {
+  height: min-content;
+}
+
+/* Image Styles */
+
+.img-index {
+  max-height: inherit;
+  width: min-content;
+  transform: scale(0.8, 0.5);
+}
 
 .view-img {
   height: 500px;
