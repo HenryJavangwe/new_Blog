@@ -5,3 +5,9 @@ body {
 a {
   color: #00B7FF;
 }
+
+/* View Image Styles */
+
+.view-img {
+  height: 500px;
+}
