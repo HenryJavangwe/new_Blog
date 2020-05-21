@@ -9,18 +9,8 @@ a {
   color: #00B7FF;
 }
 
-.card {
-  height: min-content;
+.card-img-overlay {
+  top: 40px;
+  background-color: rgba(54, 54, 54, 0.719);
 }
 
-/* Image Styles */
-
-.img-index {
-  max-height: inherit;
-  width: min-content;
-  transform: scale(0.8, 0.5);
-}
-
-.view-img {
-  height: 500px;
-}

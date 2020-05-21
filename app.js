@@ -3,6 +3,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const methodOverride = require('method-override')
 const mongoose = require('mongoose')// require mongoose for database
 
 // connecting to our Data base
@@ -26,6 +27,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(methodOverride('_method'))// now if we call _method delete/put we will be able to 
 
 // Register Routers
 app.use('/', indexRouter);
