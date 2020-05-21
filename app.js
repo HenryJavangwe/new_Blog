@@ -12,7 +12,7 @@ mongoose.connect('mongodb://localhost/BlogApp', { useNewUrlParser: true, useUnif
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var createArticle =  require('./routes/create');
-var viewArticle = require('./routes/view')
+var viewArticle = require('./routes/view');
 
 var app = express();
 
@@ -32,7 +32,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/create', createArticle);
 app.use('/view', viewArticle);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
