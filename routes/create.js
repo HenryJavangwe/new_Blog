@@ -31,9 +31,9 @@ router.post('/', async function(req, res) {
   })
 
   router.delete('/:id', async (req, res)=>{
-    await Article.findByIdAndDelete(req.params.id)
-    res.redirect('/')
-    })
+      await Article.findByIdAndDelete(req.params.id)
+      res.redirect('/')
+  })
     
 // To be able to get a hold of this route out side this module, export it like below.
 module.exports = router;
