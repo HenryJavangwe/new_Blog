@@ -8,6 +8,7 @@ router.get('/', function(req, res, next) {
     res.render('create', {article: new Article()});
 })
 
+
 //whenever we submit the form it'll call this router.post which is at this '/' 
 //this is an async function so we tell use the keywords async and then await and this will save our new article.
 router.post('/', async function(req, res) {
@@ -28,12 +29,12 @@ router.post('/', async function(req, res) {
         console.log(error)
         res.render('create', {article : article})
     }
-  })
+})
 
-  router.delete('/:id', async (req, res)=>{
-      await Article.findByIdAndDelete(req.params.id)
-      res.redirect('/')
-  })
+router.delete('/:id', async (req, res)=>{
+    await Article.findByIdAndDelete(req.params.id)
+    res.redirect('/')
+})
     
 // To be able to get a hold of this route out side this module, export it like below.
 module.exports = router;
