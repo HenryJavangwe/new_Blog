@@ -17,7 +17,6 @@ var viewArticle = require('./routes/view');
 var editArticle = require('./routes/edit');
 
 var app = express();
-
 // view engine setup
 
 app.set('views', path.join(__dirname, 'views'));
